@@ -28,29 +28,41 @@ const wins = [
 ];
 
 // updating the values of the boxValues
-	for (let i = 0; i < 9; i++) {
-		console.log(i);
-		const button = $(`#${i}`);
+for (let i = 0; i < 9; i++) {
+	console.log(i);
+	const button = $(`#${i}`);
 
-		button.on('click', function() {
-			console.log("clicked", i);
+	button.on('click', function() {
+		console.log("clicked", i);
 
-	    if (boxValues[i] === "") {
-				if (currentPlayer === true) {
-					button.addClass("active-red");
-					console.log('X played');
-					boxValues[i] = 'x'
-				} else {
-					button.addClass("active-blue");
-					console.log('O played');
-					boxValues[i] = 'o'
-				}
-			  currentPlayer = !currentPlayer;
+    if (boxValues[i] === "") {
+			if (currentPlayer === true) {
+				button.addClass("active-red");
+				console.log('X played');
+				boxValues[i] = 'x'
+			} else {
+				button.addClass("active-blue");
+				console.log('O played');
+				boxValues[i] = 'o'
 			}
+      isGameOver()
+			currentPlayer = !currentPlayer;
+		}
 
-		});
+	});
 
 	}
+
+	// Check if the player has won
+	const isGameOver = function () {
+		if (boxValues[0] === boxValues[1] && boxValues[2] === boxValues[1]) {
+			alert("You have won the game");
+			console.log("You have won");
+		} else {
+			console.log("Hey mate");
+		}
+	}
+
 
 // $('#0').on('click', function() {
 //   boxValues[0] = currentPlayer;
