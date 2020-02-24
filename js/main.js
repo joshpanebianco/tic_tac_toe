@@ -28,102 +28,126 @@ const wins = [
 ];
 
 // updating the values of the boxValues
-$('#0').on('click', function() {
-  boxValues[0] = currentPlayer;
-	if (currentPlayer === true) {
-		$(this).addClass("active-red");
-	} else {
-		$(this).addClass("active-blue");
-	}
-  currentPlayer = !currentPlayer;
-});
+	for (let i = 0; i < 9; i++) {
+		console.log(i);
+		const button = $(`#${i}`);
 
-$('#1').on('click', function() {
-  boxValues[1] = currentPlayer;
-	if (currentPlayer === true) {
-		$(this).addClass("active-red");
-	} else {
-		$(this).addClass("active-blue");
-	}
-  currentPlayer = !currentPlayer;
-});
+		button.on('click', function() {
+			console.log("clicked", i);
 
-$('#2').on('click', function() {
-  boxValues[2] = currentPlayer;
-	if (currentPlayer === true) {
-		$(this).addClass("active-red");
-	} else {
-		$(this).addClass("active-blue");
-	}
-  currentPlayer = !currentPlayer;
-});
+	    if (boxValues[i] === "") {
+				if (currentPlayer === true) {
+					button.addClass("active-red");
+					console.log('X played');
+					boxValues[i] = 'x'
+				} else {
+					button.addClass("active-blue");
+					console.log('O played');
+					boxValues[i] = 'o'
+				}
+			  currentPlayer = !currentPlayer;
+			}
 
-$('#3').on('click', function() {
-  boxValues[3] = currentPlayer;
-	if (currentPlayer === true) {
-		$(this).addClass("active-red");
-	} else {
-		$(this).addClass("active-blue");
-	}
-  currentPlayer = !currentPlayer;
-});
+		});
 
-$('#4').on('click', function() {
-  boxValues[4] = currentPlayer;
-	if (currentPlayer === true) {
-		$(this).addClass("active-red");
-	} else {
-		$(this).addClass("active-blue");
 	}
-  currentPlayer = !currentPlayer;
-});
 
-$('#5').on('click', function() {
-  boxValues[5] = currentPlayer;
-	if (currentPlayer === true) {
-		$(this).addClass("active-red");
-	} else {
-		$(this).addClass("active-blue");
-	}
-  currentPlayer = !currentPlayer;
-});
-
-$('#6').on('click', function() {
-  boxValues[6] = currentPlayer;
-	if (currentPlayer === true) {
-		$(this).addClass("active-red");
-	} else {
-		$(this).addClass("active-blue");
-	}
-  currentPlayer = !currentPlayer;
-});
-
-$('#7').on('click', function() {
-  boxValues[7] = currentPlayer;
-	if (currentPlayer === true) {
-		$(this).addClass("active-red");
-	} else {
-		$(this).addClass("active-blue");
-	}
-  currentPlayer = !currentPlayer;
-});
-
-$('#8').on('click', function() {
-  boxValues[8] = currentPlayer;
-	if (currentPlayer === true) {
-		$(this).addClass("active-red");
-	} else {
-		$(this).addClass("active-blue");
-	}
-  currentPlayer = !currentPlayer;
-});
+// $('#0').on('click', function() {
+//   boxValues[0] = currentPlayer;
+// 	if (currentPlayer === true) {
+// 		$(this).addClass("active-red");
+// 	} else {
+// 		$(this).addClass("active-blue");
+// 	}
+//   currentPlayer = !currentPlayer;
+// });
+//
+// $('#1').on('click', function() {
+//   boxValues[1] = currentPlayer;
+// 	if (currentPlayer === true) {
+// 		$(this).addClass("active-red");
+// 	} else {
+// 		$(this).addClass("active-blue");
+// 	}
+//   currentPlayer = !currentPlayer;
+// });
+//
+// $('#2').on('click', function() {
+//   boxValues[2] = currentPlayer;
+// 	if (currentPlayer === true) {
+// 		$(this).addClass("active-red");
+// 	} else {
+// 		$(this).addClass("active-blue");
+// 	}
+//   currentPlayer = !currentPlayer;
+// });
+//
+// $('#3').on('click', function() {
+//   boxValues[3] = currentPlayer;
+// 	if (currentPlayer === true) {
+// 		$(this).addClass("active-red");
+// 	} else {
+// 		$(this).addClass("active-blue");
+// 	}
+//   currentPlayer = !currentPlayer;
+// });
+//
+// $('#4').on('click', function() {
+//   boxValues[4] = currentPlayer;
+// 	if (currentPlayer === true) {
+// 		$(this).addClass("active-red");
+// 	} else {
+// 		$(this).addClass("active-blue");
+// 	}
+//   currentPlayer = !currentPlayer;
+// });
+//
+// $('#5').on('click', function() {
+//   boxValues[5] = currentPlayer;
+// 	if (currentPlayer === true) {
+// 		$(this).addClass("active-red");
+// 	} else {
+// 		$(this).addClass("active-blue");
+// 	}
+//   currentPlayer = !currentPlayer;
+// });
+//
+// $('#6').on('click', function() {
+//   boxValues[6] = currentPlayer;
+// 	if (currentPlayer === true) {
+// 		$(this).addClass("active-red");
+// 	} else {
+// 		$(this).addClass("active-blue");
+// 	}
+//   currentPlayer = !currentPlayer;
+// });
+//
+// $('#7').on('click', function() {
+//   boxValues[7] = currentPlayer;
+// 	if (currentPlayer === true) {
+// 		$(this).addClass("active-red");
+// 	} else {
+// 		$(this).addClass("active-blue");
+// 	}
+//   currentPlayer = !currentPlayer;
+// });
+//
+// $('#8').on('click', function() {
+//   boxValues[8] = currentPlayer;
+// 	if (currentPlayer === true) {
+// 		$(this).addClass("active-red");
+// 	} else {
+// 		$(this).addClass("active-blue");
+// 	}
+//   currentPlayer = !currentPlayer;
+// });
 
 // Create loop that finds if each of the boxes equals a win
 
-const game = function() {
-	/// ??
-	console.log(wins[2]);
-};
+// const game = function() {
+// 	/// ??
+// 	console.log(wins[2]);
+// };
 
 // $("#0").on('click', function() {
 // 	$(this).addClass("active-red");
