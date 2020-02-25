@@ -169,3 +169,11 @@ h1 {
   font-size: 12px;
   text-align: center;
 }
+
+
+/* Reset Button */
+
+.reset-button {
+	/* float: right; */
+	height: 198px;
+}

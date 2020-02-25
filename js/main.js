@@ -81,13 +81,29 @@ for (let i = 0; i < 9; i++) {
 		} else if (boxValues[2] === boxValues[4] && boxValues[6] === boxValues[2] & boxValues[2] !== "") {
 			console.log("You have won");
 			$(".game-status").html("<h4>You have won the game</h4>");
+		} else if (boxValues[0] !== "" && // Finding if the game is a draw
+		           boxValues[1] !== "" &&
+							 boxValues[2] !== "" &&
+							 boxValues[3] !== "" &&
+					 		 boxValues[4] !== "" &&
+					 		 boxValues[5] !== "" &&
+							 boxValues[6] !== "" &&
+					 		 boxValues[7] !== "" &&
+					 		 boxValues[8] !== "") {
+			console.log("This game is a draw");
+			$(".game-status").html("<h4>This game is a draw</h4>");
 		} else {
 			console.log("Play again");
 		}
 	}
 
-
+// Flip function
 $(".thecard").on('click', function () {
 	$(this).addClass("flip");
 })
+
+// Reset game function
+$('#reset-button').click(function() {
+    location.reload();
+});
 }); // document doc ready
