@@ -9,12 +9,26 @@
 	<title>Tic Tac Toe Game</title>
 </head>
 <body>
+
+	<!-- <div class="maincontainer">
+	 <div class="thecard">
+	 <div class="thefront"><h1>Front</h1></div>
+	 <div class="theback"><h1>Back</h1></div>
+  </div> -->
+
 	<div class="container">
 
 		<h1 class="d-flex justify-content-center">Tic Tac Toe</h1>
 
 		<div class="row d-flex justify-content-center">
-			<div class="box" id="0"><span class="x-mark"></span></div>
+			<div class="box" id="0">
+						<div class="maincontainer">
+	             <div class="thecard">
+							 	<div class="thefront"><h1>Front</h1></div>
+							 	<div class="theback"><h1>Back</h1></div>
+				      </div>
+		        </div>
+			</div>  <!-- box end -->
 			<div class="box" id="1"></div>
 			<div class="box" id="2"></div>
 		</div>
@@ -30,6 +44,8 @@
 			<div class="box" id="7"></div>
 			<div class="box" id="8"></div>
 		</div>
+
+	<div class="game-status d-flex justify-content-center"></div>
 
  </div> <!-- container end -->
 
