@@ -1,12 +1,3 @@
-// There is only 8 way a player can win
-// (0-1-2) (3,4,5) (6,7,8) (0,3,6) (1,4,7) (2,5,8) (0,4,8) (2,4,6) ....
-// Create a series of if statements that test if the current player has won
-// Player 1 starts picks a sqaure red
-// Player 2 starts with blue
-// Players take turns until one of the win condtions are true or board is full.
-
-// Define the box values
-
 $(document).ready(function() {
 
 // Define Player
@@ -27,7 +18,7 @@ const wins = [
 	[2, 4, 6]
 ];
 
-// updating the values of the boxValues
+// Updating the values of the boxValues
 for (let i = 0; i < 9; i++) {
 	console.log(i);
 	const button = $(`#${i}`);
@@ -88,16 +79,6 @@ for (let i = 0; i < 9; i++) {
 			console.log("Play again");
 		}
 	}
-
-	// const combos {
-	// 	[boxValues[0], boxValues[1], boxValues[2]]
-	// }
-	//
-  // const gameChecker = function () {
-	// 	for (var i = 0; i < boxValues.length; i++) {
-	// 		boxValues[i]
-	// 	}
-	// }
 
 // Flip function
 $(".thecard").on('click', function () {
