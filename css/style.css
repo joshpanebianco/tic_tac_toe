@@ -1,3 +1,8 @@
+body {
+	background-image: url("../pics/mario-desktop.png");
+	background-size: 100%;
+}
+
 h1 {
 	margin-top: 30px;
 	margin-bottom: 30px;
@@ -83,7 +88,8 @@ h1 {
   border-radius: 10px;
   backface-visibility: hidden;
   overflow: hidden;
-  background: #6ab04c;
+  /* background: #6ab04c; */
+	background-image: url("../pics/questionBox.png");
   color: #000;
 }
 
@@ -103,11 +109,13 @@ h1 {
 }
 
 .active-red .theback {
-	background: #eb4d4b;
+	/* background: #eb4d4b; */
+	background-image: url("../pics/mario-head.png");
 }
 
 .active-blue .theback {
-	background: #4834d4;
+	/* background: #4834d4; */
+	background-image: url("../pics/mushroom-pic.png");
 }
 
 /*This block (starts here) is merely styling for the flip card, and is NOT an essential part of the flip code */

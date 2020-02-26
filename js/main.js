@@ -89,6 +89,16 @@ for (let i = 0; i < 9; i++) {
 		}
 	}
 
+	// const combos {
+	// 	[boxValues[0], boxValues[1], boxValues[2]]
+	// }
+	//
+  // const gameChecker = function () {
+	// 	for (var i = 0; i < boxValues.length; i++) {
+	// 		boxValues[i]
+	// 	}
+	// }
+
 // Flip function
 $(".thecard").on('click', function () {
 	$(this).addClass("flip");
