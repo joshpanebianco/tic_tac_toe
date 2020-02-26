@@ -1,5 +1,4 @@
-# tic_tac_toe
-Project 0: SEI36 game project
+# tic_tac_toe - Project 0
 
 Tic Tac Toe - Project 0
 
